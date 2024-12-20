@@ -1,0 +1,18 @@
+{% extends 'fourth_task/menu.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block pagename %}<h1>{{ text }}</h1>{% endblock %}
+
+{% block menu %}{{ block.super }}{% endblock %}
+
+{% block content %}
+    <p>
+        <ul style="font-size: 20px;">
+            {% for game in games_dict.games %}
+                <li>{{ game }} <button style="font-size: 17px">{{ buy }}</button></li>
+            {% endfor %}
+        </ul>
+    </p>
+    <button style="font-size: 17px"><a href="/" style="text-decoration: none">{{ back }}</a></button>
+{% endblock %}
